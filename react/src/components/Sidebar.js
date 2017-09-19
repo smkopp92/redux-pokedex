@@ -1,23 +1,23 @@
 import React from 'react'
 
-import Link from './Link'
+import FilterLink from '../containers/FilterLink'
 
-const Sidebar = ({filterHandler, currentFilter}) => {
+const Sidebar = () => {
   return(
     <p>
       Show:
       {' '}
-      <Link filter="SHOW_ALL" onClick={filterHandler} currentFilter={currentFilter}>
+      <FilterLink filter="SHOW_ALL">
         All
-      </Link>
+      </FilterLink>
       {', '}
-      <Link filter="SHOW_CAUGHT" onClick={filterHandler} currentFilter={currentFilter}>
+      <FilterLink filter="SHOW_CAUGHT">
         Caught
-      </Link>
+      </FilterLink>
       {', '}
-      <Link filter="SHOW_YET_TO_CATCH" onClick={filterHandler} currentFilter={currentFilter}>
+      <FilterLink filter="SHOW_YET_TO_CATCH">
         Left to Catch
-      </Link>
+      </FilterLink>
     </p>
   )
 }
