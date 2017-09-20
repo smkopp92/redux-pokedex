@@ -2,7 +2,7 @@ import React from 'react'
 
 import Pokemon from './Pokemon'
 
-const PokemonList = ({currentFilter, pokemon, toggleHandler}) => {
+const PokemonList = ({currentFilter, pokemon, onPokemonClick}) => {
   let pokemonComponents = pokemon.map(pokemon => {
     return(
       <Pokemon
@@ -10,12 +10,12 @@ const PokemonList = ({currentFilter, pokemon, toggleHandler}) => {
         id={pokemon.id}
         name={pokemon.name}
         caught={pokemon.caught}
-        onClick={toggleHandler}
+        onClick={onPokemonClick}
       />
     )
   })
   return(
-    <ul>
+    <ul className="pokedex">
       {pokemonComponents}
     </ul>
   )

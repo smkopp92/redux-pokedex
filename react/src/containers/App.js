@@ -48,15 +48,15 @@ class App extends Component {
     const visiblePokemon = getVisiblePokemon(this.state.pokemon,this.state.currentFilter)
 
     return(
-      <div>
-        <PokemonList
-          currentFilter={this.state.currentFilter}
-          pokemon={visiblePokemon}
-          toggleHandler={this.toggleCaught}
-        />
+      <div className="container">
         <Sidebar
           filterHandler={this.setFilter}
           currentFilter={this.state.currentFilter}
+        />
+        <PokemonList
+          currentFilter={this.state.currentFilter}
+          pokemon={visiblePokemon}
+          onPokemonClick={this.toggleCaught}
         />
       </div>
     )
