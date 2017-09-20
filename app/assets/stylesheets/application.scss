@@ -1,2 +1,46 @@
 // @import "*";
+.sidenav {
+  height: 100%;
+  width: 120px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ee1515;
+  overflow-x: hidden;
+  padding-top: 40px;
+}
 
+.sidenav a {
+  padding: 8px 8px 8px 18px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s
+}
+
+.sidenav span {
+  padding: 8px 8px 8px 18px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s
+}
+
+.pokedex {
+  float: left;
+  margin-left: 100px;
+  list-style: none;
+  width: 115px
+}
+
+.pokemon {
+  display: inline-block;
+  margin: 2px;
+}
+
+.pokeball {
+  float: right;
+  margin-top: 2px;
+}

@@ -2,7 +2,7 @@ import React from 'react'
 
 import Pokemon from './Pokemon'
 
-const PokemonList = ({onPokemonClick, pokemon}) => {
+const PokemonList = ({pokemon, onPokemonClick}) => {
   let pokemonComponents = pokemon.map(pokemon => {
     return(
       <Pokemon
@@ -15,7 +15,7 @@ const PokemonList = ({onPokemonClick, pokemon}) => {
     )
   })
   return(
-    <ul>
+    <ul className="pokedex">
       {pokemonComponents}
     </ul>
   )

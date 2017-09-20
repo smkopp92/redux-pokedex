@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Link = ({filter, onClick, currentFilter, children}) => {
-  if (filter===currentFilter) {
+const Link = ({active, onClick, children, filter}) => {
+  if (active) {
     return <span>{children}</span>
   } else {
     return (
